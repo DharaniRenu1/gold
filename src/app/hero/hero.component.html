@@ -1,0 +1,28 @@
+<h2>heroes</h2>
+{{errmsg}}
+<div *ngFor="let hero of heroes">
+{{hero.id}}
+{{hero.name}}
+</div>
+<p appHighlight>highlight me</p>
+<p appHighlight highlightColor="Yellow">Yellow</p>
+<p appHighlight [highlightColor]="'Orange'">Orange</p>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="hero == selectedHero" (click)="Onselect(hero)">
+        {{hero.id }}
+        {{hero.name|  uppercase}}
+    </li>
+
+</ul>
+<!-- <div class="text-success" [class]="a">Hero</div>
+<div [class]="succ">Hero</div>
+<div [class]="a" >Dharani</div>
+<div [class.text-success]="hasError">Thangaraj</div>
+<div [class.text-success]="status">renu</div>
+<div [ngClass]="message">High</div>
+<div [style.color]="hasError ? 'red' : 'green'">tamilarasi</div>
+<div [style.color]="highlightcolor">loev</div>
+<div [ngStyle]=style>giggle </div>
+<button (click)="Click($event)">haui</button>{{greeting}}
+<button (click)="greeting='Welcome'"></button>{{greeting}} -->

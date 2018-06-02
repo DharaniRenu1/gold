@@ -1,0 +1,25 @@
+<div *ngIf="display; then thenBlock; else elseBlock">
+ 
+</div>
+
+
+<ng-template #thenBlock>
+<h2>D</h2>
+</ng-template>
+<ng-template #elseBlock>
+<h2>T</h2>
+ </ng-template>
+ 
+ <div *ngFor="let color of colors; index as i">
+     <table>
+         <tr>
+             <td><h2>{{i}}</h2></td>
+            
+             <td>{{color}}</td>
+         </tr>
+     </table>
+
+ </div>
+ <template ngFor let-item [ngForOf]="headerItems ">
+        <td *ngIf="item.visible">{{ item?.name }}</td>
+     </template>
